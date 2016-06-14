@@ -1,0 +1,108 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/taggd.css" />
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <ul id="nav-mobile" class="left hide-on-med-and-down grey darken-4">
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#instructions-modal">Instructions</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down grey darken-4">
+            <li>Progress</li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="container">
+
+
+
+      <form id="mturk_form">
+
+        <div class="section" id="1">
+          <h5>1. Describe the change from the first photo (original) to the second photo.</h5>
+          <p>More than one answer is possible. Use as many words as possible and separate different entries with semi-colon. </p>
+          Original:
+          <img class="responsive-img taggd people" src="img/photo_original.jpg"></img><br>
+          Altered:
+          <img class="responsive-img taggd people" src="img/photo_brightness.jpg"></img><br>
+          <input type="text" name="image1" placeholder="Enter adjectives here."><br>
+          <div class="divider"></div>
+        </div>
+
+
+        <input class="btn" type="submit">
+      </form>
+
+      <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+          <h4>Instructions</h4>
+          <p>Use your best judgement to figure out what the difference is. These pictures will be later used to generate a dataset to help users with photo editing.</p>
+          
+          <div class="divider"></div> 
+
+          <p> Example 1: </p>
+            <ol>
+              <li></li>
+              <img src="img/example1.jpg"><br>
+              <em>bluer, darker, edges are darker, deeper, more vivid, more dramatic.</em><br>
+            </ol>          
+
+          <!--p>In the context of these photos, a recognizable person:
+            <ol>
+              <li>has the <b>majority of their face/heads</b> in a picture,</li>
+              <img src="img/example0.jpg"><br>
+              <em>This picture has 6 people in it.</em><br><br>
+              <li>does <b>not</b> also include their <b>reflections</b> (only count one person once),</li>
+              <img src="img/example2.jpg"><br>
+              <em>This picture has 1 person in it.</em><br><br>
+              <li>and is a <b>human</b> and not an animal.</li>
+              <img src="img/example3.jpg"><br>
+              <em>This picture has 0 people in it.</em><br><br>
+            </ol>
+          </p-->
+
+          <p>
+
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Scripts -->
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+      </script>
+
+      <script src="js/mturk.js"></script>
+
+      
+
+      
+
+      <script>
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+        $('#instructions-modal').openModal();
+      });
+      </script>
+    </body>
+  </html>
