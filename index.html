@@ -23,50 +23,38 @@
       </nav>
       
       <div class="container">
-        <h4>How many <u><a class="modal-trigger" href="#example-modal">recognizable people</a></u> are in each of the pictures below? </h4>
-        <p>Enter your best estimate in the text boxes under each picture. These pictures will be later used to tag the people in them.</p>
+
+        <!--h4>Describe <u><a class="modal-trigger" href="#example-modal">the change</a></u> between the two pictures presented  </h4>
+        <p>More than one answer is possible. Use as many words as possible and separate different entries with commas. </p>
+        <p>(Ex. foggier, brighter, lighter, etc.)</p-->
 
       <form id="mturk_form">
+
         <div class="section">
-          <h5>Image 1</h5>
-          <img class="responsive-img taggd people" src="img/people1.jpg"></img><br>
-          <label>Total people in Image 1:</label><input type="text" name="image1" placeholder="Enter a number here"><br>
+          <h5>1. Describe the change between the following two pictures</h5>
+          <p>More than one answer is possible. Use as many words as possible and separate different entries with commas. </p>
+          <img class="responsive-img taggd people" src="img/1.png"></img><br>
+          <label>Enter adjectives here:</label><input type="text" name="image1" placeholder="Enter adjectives here."><br>
         </div>
+
         <div class="divider"></div>
+
         <div class="section">
-          <h5>Image 2</h5>
+          <h5>2. Describe the change between the following two pictures</h5>
           <img class="responsive-img taggd people" src="img/people2.jpg"></img><br>
-          <label>Total people in Image 2:</label><input type="text" name="image2" placeholder="Enter a number here"><br>
+          <label>Enter adjective here:</label><input type="text" name="image2" placeholder="Enter a number here"><br>
         </div>
         <div class="divider"></div>
         <div class="section">
-          <h5>Image 3</h5>
+          <h5>3. Describe change between the following two pictures</h5>
           <img class="responsive-img taggd people" src="img/people3.jpg"></img><br>
           <label>Total people in Image 3:</label><input type="text" name="image3" placeholder="Enter a number here"><br>
         </div>
         <div class="divider"></div>
         <div class="section">
-          <h5>Image 4</h5>
-          <img class="responsive-img taggd people" src="img/people4.jpg"></img><br>
-          <label>Total people in Image 4:</label><input type="text" name="image4" placeholder="Enter a number here"><br>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <h5>Image 5</h5>
-          <img class="responsive-img taggd people" src="img/people5.jpg"></img><br>
-          <label>Total people in Image 5:</label><input type="text" name="image5" placeholder="Enter a number here"><br>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <h5>Image 6</h5>
-          <img class="responsive-img taggd people" src="img/people6.jpg"></img><br>
-          <label>Total people in Image 6:</label><input type="text" name="image6" placeholder="Enter a number here"><br>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <h5>Image 7</h5>
-          <img class="responsive-img taggd people" src="img/people7.jpg"></img><br>
-          <label>Total people in Image 7:</label><input type="text" name="image7" placeholder="Enter a number here"><br>
+          <h5>4. Describe the steps you would take to create the following jpg.</h5>
+          <img class="responsive-img taggd people" src="img/4.jpg"></img><br>
+          <label>Total people in Image 4:</label><input type="textarea" name="image4" placeholder="Write your steps here"><br>
         </div>
         <div class="divider"></div>
 
@@ -75,8 +63,11 @@
 
       <div id="example-modal" class="modal">
         <div class="modal-content">
-          <h4>What is considered a recognizable person?</h4>
-          <p>Use your best judgement in identifying individuals. These pictures will be later used to tag the people in them.</p>
+          <h4>How would you describe the change between two photos?</h4>
+          <p>Use your best judgement to figure out what the difference is. These pictures will be later used to generate a dataset to help users with photo editing.</p>
+          
+          <div class="divider"></div> 
+
           <p>In the context of these photos, a recognizable person:
             <ol>
               <li>has the <b>majority of their face/heads</b> in a picture,</li>
